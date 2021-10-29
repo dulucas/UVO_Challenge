@@ -18,3 +18,6 @@ If you find this project useful in your research, please consider cite:
   year={2021}
 }
 ```
+
+## Contact
+Feel free to contact [me](yuming.du@enpc.fr) or open a new issue if you have any questions.
