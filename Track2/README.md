@@ -16,6 +16,9 @@ $YOUR_FOLDER/
 ```
 the prediction of **each frame** is saved in COCO format, described [here](https://cocodataset.org/#format-results).
 
+## Options
+We provide 2 options for mask wrapping, the first one is using optical flow predicted by RAFT network, the second is to apply model from [this paper]() for mask wrapping. We found that using optical flow can largely outperfom the second method, we believe this is because the downsampling in the second method hurts the performance on small/fine objects.
+
 ## Citation
 If you find this project useful in your research, please consider cite:
 ```bash
