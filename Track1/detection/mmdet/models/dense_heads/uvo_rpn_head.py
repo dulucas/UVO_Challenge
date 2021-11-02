@@ -471,7 +471,7 @@ class StageCascadeRPNHead(RPNHead):
                 pos_inds, neg_inds)
 
 
-    def get_targets(self,
+    def get_uvo_targets(self,
                     scores,
                     anchor_list,
                     valid_flag_list,
@@ -511,7 +511,7 @@ class StageCascadeRPNHead(RPNHead):
             gt_labels_list = [None for _ in range(num_imgs)]
         (all_anchors, all_labels, all_label_weights, all_bbox_targets,
          all_bbox_weights, pos_inds_list, neg_inds_list) = multi_apply(
-             self._get_target_single,
+             self._get_uvo_target_single,
              concat_score_list,
              concat_anchor_list,
              concat_valid_flag_list,
@@ -541,7 +541,7 @@ class StageCascadeRPNHead(RPNHead):
                 bbox_targets_list, bbox_weights_list, num_total_pos,
                 num_total_neg)
 
-    def _get_target_single(self,
+    def _get_uvo_target_single(self,
                            flat_scores,
                            flat_anchors,
                            valid_flags,
@@ -659,7 +659,7 @@ class StageCascadeRPNHead(RPNHead):
             cls_reg_targets (tuple)
         """
         if  isinstance(self.assigner, RPN_SimOTAAssigner):
-            cls_reg_targets = self.get_targets(
+            cls_reg_targets = self.get_uvo_targets(
                 scores,
                 anchor_list,
                 valid_flag_list,
