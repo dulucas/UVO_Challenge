@@ -44,7 +44,7 @@ model = dict(
         num_stages=2,
         stages=[
             dict(
-                type='StageCascadeRPNHead',
+                type='UVOStageCascadeRPNHead',
                 in_channels=256,
                 feat_channels=256,
                 anchor_generator=dict(
@@ -67,7 +67,7 @@ model = dict(
                 loss_bbox=dict(type='GIoULoss', loss_weight=2.0),
                 ),
             dict(
-                type='StageCascadeRPNHead',
+                type='UVOStageCascadeRPNHead',
                 in_channels=256,
                 feat_channels=256,
                 adapt_cfg=dict(type='offset'),
