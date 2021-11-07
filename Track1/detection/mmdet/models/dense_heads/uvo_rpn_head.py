@@ -101,7 +101,7 @@ class AdaptiveConv(BaseModule):
 
 
 @HEADS.register_module()
-class StageCascadeRPNHead(RPNHead):
+class UVOStageCascadeRPNHead(RPNHead):
     """Stage of CascadeRPNHead.
 
     Args:
@@ -164,7 +164,7 @@ class StageCascadeRPNHead(RPNHead):
         self.dynamic_balanced_cls_weights = dynamic_balanced_cls_weights
         assert conv_bias == 'auto' or isinstance(conv_bias, bool)
         self.conv_bias = conv_bias
-        super(StageCascadeRPNHead, self).__init__(
+        super(UVOStageCascadeRPNHead, self).__init__(
             in_channels,
             anchor_generator=anchor_generator,
             init_cfg=init_cfg,
@@ -677,7 +677,7 @@ class StageCascadeRPNHead(RPNHead):
                     gt_bboxes_ignore_list=gt_bboxes_ignore,
                     label_channels=label_channels)
         else:
-            cls_reg_targets = super(StageCascadeRPNHead, self).get_targets(
+            cls_reg_targets = super(UVOStageCascadeRPNHead, self).get_targets(
                 anchor_list,
                 valid_flag_list,
                 gt_bboxes,
@@ -1298,11 +1298,11 @@ class UVORPNHead(BaseDenseHead):
         self.test_cfg = test_cfg
 
     def loss(self):
-        """loss() is implemented in StageCascadeRPNHead."""
+        """loss() is implemented in UVOStageCascadeRPNHead."""
         pass
 
     def get_bboxes(self):
-        """get_bboxes() is implemented in StageCascadeRPNHead."""
+        """get_bboxes() is implemented in UVOStageCascadeRPNHead."""
         pass
 
     def forward_train(self,
