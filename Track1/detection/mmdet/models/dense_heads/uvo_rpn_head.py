@@ -1388,7 +1388,7 @@ class UVORPNHead(BaseDenseHead):
             list[Tensor]: Proposals of each image, each item has shape (n, 5),
                 where 5 represent (tl_x, tl_y, br_x, br_y, score).
         """
-        scale_ranges = self.test_cfg.fusion_cfg.scale_ranges
+        scale_ranges = self.test_cfg.scale_ranges
         num_same_scale_tta = len(feats) // len(scale_ranges)
 
         samples_per_gpu = len(img_metas[0])
