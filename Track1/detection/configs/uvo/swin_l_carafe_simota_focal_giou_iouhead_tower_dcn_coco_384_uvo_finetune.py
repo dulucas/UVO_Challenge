@@ -1,3 +1,12 @@
+tta_flip = True
+tta_scale = [(667, 400), (833, 500), (1000, 600), (1067, 640), (1167, 700),
+             (1333, 800), (1500, 900), (1667, 1000), (1833, 1100),
+             (2000, 1200), (2167, 1300), (2333, 1400), (3000, 1800)]
+
+scale_ranges = [(96, 10000), (96, 10000), (64, 10000), (64, 10000),
+                (64, 10000), (0, 10000), (0, 10000), (0, 10000), (0, 256),
+                (0, 256), (0, 192), (0, 192), (0, 96)]
+
 _base_ = '../rpn/rpn_r50_caffe_fpn_1x_coco.py'
 pretrained = 'PATH/TO/YOUR/swin_large_patch4_window12_384_22k.pth'
 model = dict(
@@ -112,21 +121,13 @@ model = dict(
     ]),
     test_cfg=dict(
         rpn=dict(
+            scale_ranges=scale_ranges,
             score_thr=0.00000001,
             nms_pre=2000,
             max_per_img=2000,
             nms=dict(type='nms', iou_threshold=0.8),
             min_bbox_size=0))
 )
-
-tta_flip = True
-tta_scale = [(667, 400), (833, 500), (1000, 600), (1067, 640), (1167, 700),
-             (1333, 800), (1500, 900), (1667, 1000), (1833, 1100),
-             (2000, 1200), (2167, 1300), (2333, 1400), (3000, 1800)]
-
-scale_ranges = [(96, 10000), (96, 10000), (64, 10000), (64, 10000),
-                (64, 10000), (0, 10000), (0, 10000), (0, 10000), (0, 256),
-                (0, 256), (0, 192), (0, 192), (0, 96)]
 
 img_norm_cfg = dict(
     mean=[103.530, 116.280, 123.675], std=[1.0, 1.0, 1.0], to_rgb=False)
@@ -144,8 +145,8 @@ test_pipeline = [
     dict(type='LoadImageFromFile'),
     dict(
         type='MultiScaleFlipAug',
-        img_scale=(1333, 800),
-        flip=False,
+        img_scale=tta_scale,
+        flip=tta_flip,
         transforms=[
             dict(type='Resize', keep_ratio=True),
             dict(type='RandomFlip'),
