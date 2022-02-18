@@ -39,6 +39,41 @@ test_pipeline = [
         ])
 ]
 
+# Path to your detection results
+det_result = '/home/duy/phd/mmsegmentation/linemod_demo.json'
+
+# Path to your data root directory(the root path is by default /path/to/your/mmsegmentation/)
+dataroot = 'data/posetrack/'
+imgdir = 'linemod/test/'
+# Then the path of image data is : /path/to/your/mmsegmentation/data/posetrack/linemod/test/
+
+voc_train = dict(
+        type=dataset_type,
+        data_root=dataroot,
+        img_dir=imgdir,
+        proposal_path=det_result,
+        gt_path=det_result,
+        pipeline=train_pipeline
+)
+
+data = dict(
+    samples_per_gpu=1,
+    workers_per_gpu=1,
+    train=voc_train,
+    val=dict(
+        type=dataset_type,
+        data_root=dataroot,
+        img_dir=imgdir,
+        proposal_path=det_result,
+        gt_path=det_result,
+        pipeline=test_pipeline),
+    test=dict(
+        type=dataset_type,
+        data_root=dataroot,
+        img_dir=imgdir,
+        proposal_path=det_result,
+        gt_path=det_result,
+        pipeline=test_pipeline))
 voc_train = dict(
         type=dataset_type,
         data_root='data/uvo/',
@@ -48,21 +83,3 @@ voc_train = dict(
         pipeline=train_pipeline
 )
 
-data = dict(
-    samples_per_gpu=4,
-    workers_per_gpu=4,
-    train=voc_train,
-    val=dict(
-        type=dataset_type,
-        data_root='data/uvo/',
-        img_dir='YOUR/UVO/PATH/',
-        proposal_path='YOUR/PROPOSAL/PATH/xxxx.json',
-        gt_path='YOUR/ANNOTATION/PATH/UVO_frame_test.json',
-        pipeline=test_pipeline),
-    test=dict(
-        type=dataset_type,
-        data_root='data/uvo/',
-        img_dir='YOUR/UVO/PATH/',
-        proposal_path='YOUR/PROPOSAL/PATH/xxxx.json',
-        gt_path='YOUR/ANNOTATION/PATH/UVO_frame_test.json',
-        pipeline=test_pipeline))
