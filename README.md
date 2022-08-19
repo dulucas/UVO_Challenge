@@ -22,7 +22,7 @@ This is an official repo for our UVO Challenge solutions for Image/Video-based o
 |----------------------------|------|---------|---------|
 | UVO_Segementor    | COCO | - | [weights](https://drive.google.com/file/d/1VC7oS1x6ttQ4t-Px3r8BfbQP7FfhgRj-/view?usp=sharing)|
 | UVO_Segmentor     | COCO, PASCAL, OpenImage| - |[config](./Track1/segmentation/configs/swin/swin_l_upper_w_jitter_training.py)/[weights](https://1drv.ms/u/s!Ar4uxu1EELfHdafV-y_AWo5sJR0?e=9YLc8m)|
-| UVO_Segmentor     | COCO, PASCAL, OpenImage | UVO|[config](./Track1/segmentation/configs/swin/swin_l_upper_w_jitter_uvo_finetune_training.py)/[weights](https://drive.google.com/file/d/10EeNkJkFRaPNhGeRAegrSdY-VslrgFrZ/view?usp=sharing)|
+| UVO_Segmentor     | COCO, PASCAL, OpenImage | UVO|[config](./Track1/segmentation/configs/swin/swin_l_upper_w_jitter_uvo_finetune_training.py)/[weights](https://drive.google.com/file/d/1oWkJA10VTUoEaRkoaPDz_gnQ5Bg67oHx/view?usp=sharing)|
 
 ## Citation
 If you find this project useful in your research, please consider cite:
