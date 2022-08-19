@@ -14,15 +14,15 @@ This is an official repo for our UVO Challenge solutions for Image/Video-based o
 **Detection**
 | Model                      | Pretrained datasets | Finetuned datasets | links   |
 |----------------------------|------|---------|---------|
-| UVO_Detector     | COCO | - |[config](./Track1/detection/configs/uvo/swin_l_carafe_simota_focal_giou_iouhead_tower_dcn_coco_384.py)/[weights](https://drive.google.com/file/d/1SmRUdYljUmYxLkbwfdJqys_lWPu7kN3q/view?usp=sharing)|
-| UVO_Detector     | COCO | UVO |[config](./Track1/detection/configs/uvo/swin_l_carafe_simota_focal_giou_iouhead_tower_dcn_coco_384_uvo_finetune.py)/[weights](https://drive.google.com/file/d/1coV2E0qF13t4aEUT_9i2f1Dpcwk1e1rK/view?usp=sharing)|
+| UVO_Detector     | COCO | - |[config](./Track1/detection/configs/uvo/swin_l_carafe_simota_focal_giou_iouhead_tower_dcn_coco_384.py)/[weights](https://drive.google.com/file/d/1coV2E0qF13t4aEUT_9i2f1Dpcwk1e1rK/view?usp=sharing)|
+| UVO_Detector     | COCO | UVO |[config](./Track1/detection/configs/uvo/swin_l_carafe_simota_focal_giou_iouhead_tower_dcn_coco_384_uvo_finetune.py)/[weights]()|
 
 **Segmentation**
 | Model                      | Pretrained datasets | Finetuned datasets | links   |
 |----------------------------|------|---------|---------|
-| UVO_Segementor    | COCO | - | [weights](https://drive.google.com/file/d/1VC7oS1x6ttQ4t-Px3r8BfbQP7FfhgRj-/view?usp=sharing)|
+| UVO_Segementor    | COCO | - | [weights](https://drive.google.com/file/d/1oWkJA10VTUoEaRkoaPDz_gnQ5Bg67oHx/view?usp=sharing)|
 | UVO_Segmentor     | COCO, PASCAL, OpenImage| - |[config](./Track1/segmentation/configs/swin/swin_l_upper_w_jitter_training.py)/[weights](https://1drv.ms/u/s!Ar4uxu1EELfHdafV-y_AWo5sJR0?e=9YLc8m)|
-| UVO_Segmentor     | COCO, PASCAL, OpenImage | UVO|[config](./Track1/segmentation/configs/swin/swin_l_upper_w_jitter_uvo_finetune_training.py)/[weights](https://drive.google.com/file/d/1oWkJA10VTUoEaRkoaPDz_gnQ5Bg67oHx/view?usp=sharing)|
+| UVO_Segmentor     | COCO, PASCAL, OpenImage | UVO|[config](./Track1/segmentation/configs/swin/swin_l_upper_w_jitter_uvo_finetune_training.py)/[weights]()|
 
 ## Citation
 If you find this project useful in your research, please consider cite:
