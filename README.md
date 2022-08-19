@@ -15,7 +15,7 @@ This is an official repo for our UVO Challenge solutions for Image/Video-based o
 | Model                      | Pretrained datasets | Finetuned datasets | links   |
 |----------------------------|------|---------|---------|
 | UVO_Detector     | COCO | - |[config](./Track1/detection/configs/uvo/swin_l_carafe_simota_focal_giou_iouhead_tower_dcn_coco_384.py)/[weights](https://drive.google.com/file/d/1SmRUdYljUmYxLkbwfdJqys_lWPu7kN3q/view?usp=sharing)|
-| UVO_Detector     | COCO | UVO |[config](./Track1/detection/configs/uvo/swin_l_carafe_simota_focal_giou_iouhead_tower_dcn_coco_384_uvo_finetune.py)/[weights](https://drive.google.com/file/d/1VdtZ6D34VlaUprUqoxRIiLj2ab5hLOaZ/view?usp=sharing)|
+| UVO_Detector     | COCO | UVO |[config](./Track1/detection/configs/uvo/swin_l_carafe_simota_focal_giou_iouhead_tower_dcn_coco_384_uvo_finetune.py)/[weights](https://drive.google.com/file/d/1coV2E0qF13t4aEUT_9i2f1Dpcwk1e1rK/view?usp=sharing)|
 
 **Segmentation**
 | Model                      | Pretrained datasets | Finetuned datasets | links   |
