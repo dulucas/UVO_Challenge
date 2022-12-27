@@ -1,7 +1,7 @@
 # UVO_Challenge
 
 ## Update
-Pretrained model deleted because I have no space left on my google drive.. Please contact me directly if you need the pretrained models.
+**Please kindly refer to [this repo](https://github.com/nv-nguyen/pizza) for the detection and segmentation code. This is exactly the same model we use during the UVO challenge.**
 
 ## Team Alpes_runner Solutions
 This is an official repo for our UVO Challenge solutions for Image/Video-based open-world segmentation. Our team "Alpes_runner" achieved the **best performance** on both Image/Video-based benchmarks. More details about the workshop can be found [here](https://sites.google.com/view/unidentified-video-object/home?authuser=0).
