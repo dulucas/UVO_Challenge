@@ -43,4 +43,4 @@ If you find this project useful in your research, please consider cite:
 ```
 
 ## Contact
-Feel free to contact [me](yuming.du@enpc.fr) or open a new issue(**Prefered, as everybody can see your issue**) if you have any questions.
+Feel free to open a new issue(**Prefered, as everybody can see your issue**) or contact [me](yuming.du@enpc.fr) if you have any questions.
