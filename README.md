@@ -5,6 +5,8 @@ High quality class-agnostic image/video segmentation framework.
 **Please kindly refer to [this repo](https://github.com/nv-nguyen/pizza) for the detection and segmentation code. This is exactly the same model we use during the UVO challenge.**
 
 ## Visualization
+Our method can still achieve decent results on blur/occluded images/videos.
+
 ![Image](./asset/seg_example.png)
 ![Video](./asset/viz_challenge_track2.png)
 
