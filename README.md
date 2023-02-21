@@ -1,7 +1,12 @@
 # UVO_Challenge
+High quality class-agnostic image/video segmentation framework.
 
 ## Update
 **Please kindly refer to [this repo](https://github.com/nv-nguyen/pizza) for the detection and segmentation code. This is exactly the same model we use during the UVO challenge.**
+
+## Visualization
+![Image](./asset/seg_example.png)
+![Video](./asset/viz_challenge_track2.png)
 
 ## Team Alpes_runner Solutions
 This is an official repo for our UVO Challenge solutions for Image/Video-based open-world segmentation. Our team "Alpes_runner" achieved the **best performance** on both Image/Video-based benchmarks. More details about the workshop can be found [here](https://sites.google.com/view/unidentified-video-object/home?authuser=0).
